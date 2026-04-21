@@ -22,7 +22,7 @@ record_btn.addEventListener('click',function(e){
     console.log(su_kien_may);
 
     //Gởi các thông tin record lên database
-    let request_string = 'http://localhost:3001/saveevent';
+    let request_string = 'https://nv-machine-api.onrender.com/saveevent';
     fetch(request_string, {
     method: 'POST',
     headers: {

@@ -1,7 +1,7 @@
 const token = localStorage.getItem('token');
 
     //Gởi các thông tin record lên database
-    let request_string = 'http://localhost:3001/maintenance-schedule';
+    let request_string = 'https://nv-machine-api.onrender.com/maintenance-schedule';
     fetch(request_string, {
     method: 'POST',
     headers: {

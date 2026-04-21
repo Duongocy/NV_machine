@@ -18,7 +18,7 @@ login_button.addEventListener('click', async function (event) {
         const ten_dang_nhap = input_name.value;
         const pass_dang_nhap = input_pass.value;
         try { 
-            const phan_hoi_tu_api = await fetch('http://localhost:3001/login?kieuyeucau=dangnhap', {
+            const phan_hoi_tu_api = await fetch('https://nv-machine-api.onrender.com/login?kieuyeucau=dangnhap', {
                 method: 'POST',
                 headers: {
                             'Content-Type': 'application/json'

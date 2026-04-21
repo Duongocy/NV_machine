@@ -10,7 +10,7 @@ record_btn.addEventListener('click',function(e){
     console.log(machine);
 
     //Gởi các thông tin record lên database
-    let request_string = 'http://localhost:3001/machinehistory';
+    let request_string = 'https://nv-machine-api.onrender.com/machinehistory';
     fetch(request_string, {
     method: 'POST',
     headers: {
