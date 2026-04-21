@@ -1,0 +1,105 @@
+/* Thiết lập chung để trang hiển thị tốt trên di động */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Tiêu đề trang */
+.machine-record-head {
+    width: 100%;
+    height: 60px;
+    background-color: #343a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Container chính cho form */
+.input-box {
+    width: 92%; /* Chiếm phần lớn chiều ngang mobile */
+    max-width: 500px; /* Giới hạn độ rộng khi xem trên máy tính */
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Tiêu đề của Form */
+.input-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+/* Box chứa các ô input xếp dọc */
+.detail-input-box {
+    display: flex;
+    flex-direction: column; /* Quan trọng: Xếp các đối tượng theo chiều dọc */
+    gap: 15px; /* Khoảng cách giữa các ô input */
+}
+
+/* Style cho các ô input */
+input {
+    width: 100%;
+    padding: 15px; /* Tăng độ dày để dễ chạm trên mobile */
+    font-size: 16px; /* Ngăn iOS tự động zoom khi nhấn vào */
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Nút bấm Lưu sự kiện */
+.button-box {
+    margin-top: 25px;
+}
+
+#record-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #28a745; /* Màu xanh lá biểu thị hành động lưu thành công */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-transform: uppercase;
+}
+
+#record-btn:active {
+    background-color: #1e7e34;
+    transform: scale(0.98); /* Hiệu ứng nhấn nút */
+}
+
+/* Tối ưu hóa thêm cho màn hình cực nhỏ */
+@media (max-width: 380px) {
+    .input-box {
+        padding: 15px;
+    }
+    
+    .input-title {
+        font-size: 1rem;
+    }
+}

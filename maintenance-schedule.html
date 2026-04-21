@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảo trì máy - Checking for machine maintenance schedule</title>
+    <link rel="stylesheet" href="maintenance-schedule.css">
+    <link rel="icon" href="iconinv.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<!-- Code của trang login được viết ở đây -->
+<body>
+    <div class="container">
+    <h2>🛠️ BÁO CÁO BẢO TRÌ ĐỊNH KỲ (PHẠM VI 7 NGÀY)</h2>
+
+    <div class="group-today">
+        <h3>🔥 Bảo trì hôm nay</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã máy</th>
+                    <th>Tên máy</th>
+                    <th>Khu vực</th>
+                </tr>
+            </thead>
+            <tbody id="today-body">
+                </tbody>
+        </table>
+    </div>
+
+    <div class="group-upcoming">
+        <h3>📅 Sắp đến hạn (Trong 7 ngày tới)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã máy</th>
+                    <th>Tên máy</th>
+                    <th>Khu vực</th>
+                    <th>Thời gian còn lại</th>
+                </tr>
+            </thead>
+            <tbody id="upcoming-body">
+                </tbody>
+        </table>
+    </div>
+
+    <div class="group-past">
+        <h3>⚠️ Đã qua lịch bảo trì</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã máy</th>
+                    <th>Tên máy</th>
+                    <th>Khu vực</th>
+                    <th>Nên bảo trì cách đây</th>
+                </tr>
+            </thead>
+            <tbody id="past-body">
+                </tbody>
+        </table>
+    </div>
+</div>
+<script src="maintenance-schedule.js"></script>
+</body>
+</html>

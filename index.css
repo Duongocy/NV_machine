@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-box {
+  width: 30%;
+  border: 1px solid #022f11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #213221;
+}
+.id-and-pass-box {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.login-title,
+#input-email,
+#input-name,
+#input-pass,
+#confirm-input-pass,
+#login-button,
+#login-question {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.login-title {
+  font-size: 18px;
+  color: aliceblue;
+  margin-top: 20px;
+}
+#login-question {
+  color: aliceblue;
+  margin-bottom: 20px;
+}
+.button-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#login-button {
+  width: 50%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: aqua;
+}
+#input-name,
+#input-code,
+#input-pass,
+#confirm-input-pass {
+  border: none;
+  border-bottom: 1.5px solid #c9e0c9;
+  outline: none;
+  background-color: #213221;
+  color: aliceblue;
+}
+#confirm-input-pass {
+  display: none;
+}
+a{
+  text-decoration: none;
+}
+
+/* Phần dành cho màn hình điện thoại */
+@media only screen and (max-width: 768px) {
+  body {
+    width: 95vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-box {
+    width: 100%;
+    border: 1px solid #022f11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #213221;
+  }
+a {
+  text-decoration: none;
+ }
+}

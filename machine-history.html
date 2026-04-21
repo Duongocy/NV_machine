@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra hồ sơ máy - Machine history record</title>
+    <link rel="stylesheet" href="machine-history.css">
+    <link rel="icon" href="iconinv.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<!-- Code của trang login được viết ở đây -->
+<body>
+    <div class="add-machine-head" id="addMachineHead"></div>
+    <form class="input-box">
+        <div class="input-title">
+            Kiểm tra hồ sơ lịch sử máy - Check machine history record
+        </div>
+        <div class="detail-input-box">
+            <input id="machineId" type="text" placeholder="Số máy (Machine No)" required>
+        </div>
+        <div class="button-box">
+            <button type="submit" id="record-btn" autocomplete="off">Kiểm tra lịch sử máy</button>
+        </div>
+    </form>
+    <!--////////////////////////////////////////////////////////////////////-->
+    <div id="machine-info-display" style="border: 1px solid #ccc; padding: 15px; background-color: #f9f9f9; margin-bottom: 20px; display: none;">
+    <h3 style="margin-top: 0;">🛠️ Thông tin máy</h3>
+    <p><strong>ID máy:</strong> <span id="info-id"></span></p>
+    <p><strong>Tên máy:</strong> <span id="info-name"></span></p>
+    <p><strong>Ngày lắp đặt:</strong> <span id="info-install-date"></span></p>
+    <p><strong>Khu vực:</strong> <span id="info-area"></span></p>
+</div>
+
+<div id="history-table-container" style="display: none;">
+    <h3>📋 Lịch sử bảo trì (Sắp xếp mới nhất lên đầu)</h3>
+    <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead style="background-color: #007bff; color: white;">
+            <tr>
+                <th style="padding: 8px;">Ngày sự kiện</th>
+                <th style="padding: 8px;">Nguyên nhân</th>
+                <th style="padding: 8px;">Giải pháp</th>
+                <th style="padding: 8px;">Người thực hiện (PIC)</th>
+            </tr>
+        </thead>
+        <tbody id="history-table-body">
+            </tbody>
+    </table>
+    
+    <div id="no-history-message" style="display: none; color: orange; margin-top: 10px;">
+        ⚠️ Máy này chưa có lịch sử bảo trì nào được ghi nhận.
+    </div>
+</div>
+    <!--////////////////////////////////////////////////////////////////////-->
+        
+    </div>
+    <script src="machine-history.js"></script>
+</body>
+</html>

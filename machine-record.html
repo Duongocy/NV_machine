@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Record</title>
+    <link rel="stylesheet" href="machine-record.css">
+    <link rel="icon" href="iconinv.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<!-- Code của trang login được viết ở đây -->
+<body>
+    <div class="machine-record-head" id="machineRecordHead"></div>
+    <form class="input-box">
+        <div class="input-title">
+            Thông tin sự kiện máy
+        </div>
+        <div class="detail-input-box">
+            <input id="machine-id" type="text" placeholder="Mã máy" required>
+            <input id="cause" type="text" placeholder="Vấn đề là gì?" required>
+            <input id="action" type="text" placeholder="Hành động khắc phục" required>
+            <input id="replacement-part" type="text" placeholder="Thay mới gì không?" required>
+        </div>
+        <div class="button-box">
+            <button type="submit" id="record-btn" autocomplete="off">Lưu sự kiện</button>
+        </div>
+    </form>
+
+    <script src="machine-record.js"></script>
+</body>
+</html>
