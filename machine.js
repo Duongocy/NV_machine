@@ -33,6 +33,6 @@ maintenance_machine_btn.addEventListener('click', function(){
 })
 
 machine_list_btn.addEventListener('click', function(){
-    window.location.href = 'maintenance-list.html'; // Chuyển hướng đến trang ghi sự kiện máy
+    window.location.href = 'machine-list.html'; // Chuyển hướng đến trang ghi sự kiện máy
 
 })
