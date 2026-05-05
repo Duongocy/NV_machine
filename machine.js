@@ -5,6 +5,8 @@ const record_machine_event_btn = document.getElementById('btn01');
 const add_machine_btn = document.getElementById('btn04');
 const history_machine_btn = document.getElementById('btn03');
 const maintenance_machine_btn = document.getElementById('btn02');
+const machine_list_btn = document.getElementById('btn05');
+
 
 
 
@@ -27,5 +29,10 @@ history_machine_btn.addEventListener('click', function(){
 
 maintenance_machine_btn.addEventListener('click', function(){
     window.location.href = 'maintenance-schedule.html'; // Chuyển hướng đến trang ghi sự kiện máy
+
+})
+
+machine_list_btn.addEventListener('click', function(){
+    window.location.href = 'maintenance-list.html'; // Chuyển hướng đến trang ghi sự kiện máy
 
 })
