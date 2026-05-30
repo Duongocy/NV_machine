@@ -49,8 +49,9 @@ function displayMachineList(machines) {
     listBody.innerHTML = machines.map((m, index) => `
         <tr>
             <td>${index + 1}</td>
-            <td>${m.machine_id}</td>
             <td>${m.machine_name}</td>
+            <td>${m.machine_id}</td>
+            <td>${m.acc_num}</td>
             <td>${m.installation_area}</td>
         </tr>
     `).join('');
