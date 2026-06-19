@@ -143,3 +143,19 @@ function displayMaintenanceHistory(historyRecords) {
 }
     ///////////////////////////////////////////////////////////
 })
+
+// --- ĐOẠN CODE TỰ ĐỘNG LẤY ID TỪ URL VÀ TRA CỨU ---
+window.addEventListener('DOMContentLoaded', function() {
+    // 1. Phân tích URL để lấy tham số 'id'
+    const urlParams = new URLSearchParams(window.location.search);
+    const idFromUrl = urlParams.get('id');
+
+    // 2. Nếu tìm thấy ID trên URL và các thẻ HTML cần thiết tồn tại
+    if (idFromUrl && machine_id && record_btn) {
+        // Tự động điền ID vào ô input tra cứu
+        machine_id.value = idFromUrl;
+        
+        // Tự động kích hoạt sự kiện click vào nút "Xem lịch sử"
+        record_btn.click();
+    }
+});
