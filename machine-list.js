@@ -50,7 +50,9 @@ function displayMachineList(machines) {
         <tr>
             <td>${index + 1}</td>
             <td>${m.machine_name}</td>
-            <td>${m.machine_id}</td>
+            <a href="machine-history.html?id=${encodeURIComponent(m.machine_id)}" style="color: #007bff; font-weight: bold; text-decoration: none;">
+                    ${m.machine_id}
+            </a>
             <td>${m.acc_num}</td>
             <td>${m.installation_area}</td>
         </tr>
